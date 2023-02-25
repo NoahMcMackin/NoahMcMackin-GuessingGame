@@ -27,6 +27,18 @@ public class GameService {
      * @return true if guessNumber is equal to the secretNumber, false otherwise.
      */
     public boolean checkGuess(double guessNumber) {
-        return false;
+        if(guessNumber < secretNumber){
+            System.out.println("Guess too low!");
+            return false;
+        }
+        else if(guessNumber > secretNumber){
+            System.out.println("Guess too high!");
+            return false;
+        }
+        else{
+            System.out.println("Correct! The secret number was: " + secretNumber);
+            return true;
+        }
+            
     }
 }
